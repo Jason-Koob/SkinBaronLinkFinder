@@ -33,18 +33,18 @@ def menu():
     chooseItemName = str(input())
 
     # ItemName Options
-    print(color.GREEN + '\nWhat is the name of the skin?: (Ex.Copper)\n' + color.CYAN)
+    print(color.GREEN + '\nWhat is the name of the skin?: (Ex.Orange-Peel)\n' + color.CYAN)
     chooseSkinName = str(input())
 
     # Wear Options
-    print(color.GREEN + '\nWhat is the wear of the skin?: (factory-New)\n' + color.CYAN)
+    print(color.GREEN + '\nWhat is the wear of the skin?: (Field-Tested)\n' + color.CYAN)
     chooseSkinWear = str(input())
 
     fullURL = baseURL + '/' + chooseItemType + '/' + chooseItemName + '/' + chooseSkinName + '/' + chooseSkinWear + endURL
 
     # Record Data to records.txt
     with open('links.txt', 'a') as docWrite:
-        docWrite.write(chooseSkinName + ' / ' + chooseSkinWear + '  -  ' + fullURL + '\n')
+        docWrite.write(chooseItemName+ ' / ' + chooseSkinName + ' / ' + chooseSkinWear + '  -  ' + fullURL + '\n')
     
     # Print URL
     print('\n' + color.YELLOW + fullURL )
